@@ -19,6 +19,7 @@ class Cn{
         if($mysqli->connect_errno){
             $res = $mysqli->connect_error;
         }else{
+            $mysqli->set_charset("utf8");
             $res = $mysqli;
         }
         return $res;

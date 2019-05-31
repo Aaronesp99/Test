@@ -1,1 +1,4 @@
-#Options All - Indexes
+#<Files *.php>
+#    Order Deny,Allow
+#    Deny from all
+#</Files>
