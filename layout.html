@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .navbar{
+        background: #9293bd;
+        height: 47px;
+        position: fixed;
+        top: 0;
+        margin-left: 220px;
+        /* padding-left: 220px; */
+        /* width: calc(100%-220px); */
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .navbar nav{
+        padding: 0px 10px;
+        align-items: center;
+    }
+    .navbar nav a{
+        display: inline-block;
+        text-decoration: none;
+        font-size: 18px;
+        min-width: 80px; 
+    }
+    .slidebar{
+        height: 100%;
+        position: fixed;
+        width: 220px;
+        background: #eceaea;
+        overflow: auto; 
+    }
+    .slide-title{
+
+    }
+    .content{
+        /* position: relative; */
+        margin-left: 225px;
+        /* width: 83vw; */
+        /* height: 80vh; */
+    }
+    .content-page{
+        position: absolute;
+        /* width: 100%; */
+        /* left: px; */
+        margin-top: 48px;
+        /* background: #6b6666; */
+    }
+    body{
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn-1{
+        margin: 2px;
+        min-width: 100px;
+        min-height: 30px;
+        background: #323ea2;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 8px;
+        font-weight: 600;
+        letter-spacing: 0.1px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .btn-1:hover{
+        background: #283282;
+    }
+
+    table{
+        border-spacing: 0px;
+        width: 95%;
+        table-layout: fixed;
+        margin: auto;
+    }
+    table thead tr{
+        background: #6b6666;
+    }
+    table thead th{
+        height: 30px;
+        color: #fff;
+        padding: 3px 0px;
+    }
+    table tbody {
+        cursor: pointer;
+    }
+    table tbody td{
+        height: 40px;
+        font-size: 14px;
+        word-wrap: break-word;
+        padding: 0px 8px;
+    }
+    table tbody tr:nth-child(2n){
+        background: #4b4b4e3b;
+    }
+    table tbody tr:nth-child(2n):hover{
+        background: #4b4b4e57;
+    }
+    table tbody tr:nth-child(2n-1){
+        background: #fff;
+    }
+    table tbody tr:nth-child(2n-1):hover{
+        background: #eceaea;
+    }
+
+
+</style>
+<body>
+    <header class="navbar">
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>        
+    </header>
+    <div class="slidebar">
+        <span class="slide-title">Title</span>
+    </div>
+    <div class="content">
+        <div class="content-page">
+            <button class="btn-1">Click me!</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Edad</th>
+                        <th>Educación</th>
+                        <th>Trabajo</th>
+                        <th>Nacimiento</th>
+                    </tr>
+                </thead>
+                <tbody class="t-body">
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var tbody = document.getElementsByTagName("tbody");
+        for(var i=1; i<29; i++){
+            tbody[0].innerHTML +=`<tr>
+                <td>Content</td>
+                <td>Content</td>
+                <td>Content</td>
+                <td>Content</td>
+                <td>Content</td>
+                <td>Content</td>
+            </tr>`;
+        }
+    </script>
+</body>
+</html>
